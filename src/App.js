@@ -1,30 +1,27 @@
-import './App.css';
-
-function App() {
-  let name="react app"
-  let className="App-header"
-  console.log(App)
-  return (
-    <div className="">
-      <div className={className}>
-        {name}
-        <h1>Hello World</h1>
-        <Demo></Demo>
-      </div>
-      
-    </div>
-  );
-}
-
-function Demo() {
-  console.log(Demo)
-  return (
+import Video from "./components/Video";
+import "./App.css"
+function App(){
+  let obj={
+      title: "Node js Tutorial",
+      views: "745K",
+      channel: "Zoro Codes",
+      time:"1 years ago",
+  };
+  return(
     <div className="App">
-      <div className="App-header">
-        <h1>Demo</h1>
-      </div> 
+      <div><h1>Videos</h1></div>
+      <Video {...obj}></Video>
+      <Video 
+      title="React js Tutorial" 
+      views="45K"
+       channel="Sanji Codes" 
+       time="2 months ago"></Video>
+      <Video 
+      title="Mongo DB Tutorial" 
+      views="205K" 
+      time="7 months ago"></Video>
     </div>
-  );
+  )
 }
 
 export default App;
