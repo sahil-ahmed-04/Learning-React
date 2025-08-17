@@ -1,11 +1,12 @@
 import "./Video.css"
 
 
-function Video({title, channel="Luffy Codes", views, time, verified,id}){
+function Video({title, channel="Luffy Codes", views, time, verified,id,children}){
     return(
         <div className="container">
             <div className="pic">
                  <img src={`https://picsum.photos/id/${id}/400/220`} alt="Katherine Johnson" />
+                 <span>{children}</span>
             </div>
            
             <div className="title">{title}</div>
